@@ -43,6 +43,7 @@ header h1:hover {
 header a {
     text-decoration: none;
     transition: font-size 1s;
+    color: #551A8B;
 }
 
 /* header a:hover {
