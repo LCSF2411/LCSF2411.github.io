@@ -88,7 +88,9 @@ strong {
 /* Desktop Styles (Min-width 1025px) */
 @media (min-width: 1025px) {
     main {
-        padding: 0 40px; /* Larger padding for desktops */
+        border-radius: 5px;
+        box-shadow: 1px 1px 6px 1px black;
+        padding: 13px;
     }
 
     h1, h2 {
