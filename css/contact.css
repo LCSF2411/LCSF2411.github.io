@@ -73,6 +73,12 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"], 
     width: 91%;
 }
 
+.hear-about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
 textarea {
     resize: vertical;
 }
@@ -149,7 +155,7 @@ select {
 
     fieldset.location {
         margin-top: 11px;
-    }  
+    } 
 
     .support {
         text-align: center;
