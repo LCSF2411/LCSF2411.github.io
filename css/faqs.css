@@ -1,0 +1,137 @@
+/*
+Author: Akash Mannil
+Date: December 4, 2024
+File Name: faqs.css
+*/
+
+/* Base Styles for Mobile First */
+
+/* General Layout */
+main {
+    padding: 0 25px;
+    margin-top: 20px;
+}
+
+/* Section Styles */
+section, div.intro {
+    margin-bottom: 40px;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    background-color: #a89e45d6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    box-shadow: 0px 0px 14px 0px black;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.faq-item:nth-last-child(1) {
+    border: unset;
+}
+
+.faq-item a, .intro a {
+    color: #551a8b;
+}
+
+.faq-item h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 0.9em;
+}
+
+/* Support Section Styles */
+.support-section {
+    background-color: #a89e45d6;
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0px 0px 14px 0px black;
+}
+
+.support-section a {
+    font-weight: bold;
+    color: #551a8b;
+}
+
+/* Customer Feedback Section Styles */
+.feedback-section {
+    text-align: center;
+    padding: 15px;
+    background-color: #a89e45d6;
+    margin-top: 20px;
+    color: #fff;
+    box-shadow: 0px 0px 14px 0px black;
+}
+
+h2, h3 {
+    color: #fff ;
+}
+
+.feedback-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #a89e45;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feedback-button:hover {
+    color: #fff;
+    background-color: #a89e45d6;
+}
+
+/* Responsive Design */
+
+/* Tablet Styles (Min-width: 768px) */
+@media (min-width: 768px) {
+    .faq-item {
+        margin-bottom: 20px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.1em;
+    }
+
+    .faq-item p {
+        font-size: 1em;
+    }
+
+    .feedback-button {
+        padding: 10px 20px;
+    }
+}
+
+/* Desktop Styles (Min-width: 1025px) */
+@media (min-width: 1025px) {
+    .faq-item h3 {
+        font-size: 1.2em;
+    }
+
+    .faq-item p {
+        font-size: 1.1em;
+    }
+
+    .feedback-button {
+        padding: 12px 24px;
+    }
+
+    .support-section {
+        padding: 20px;
+    }
+
+    .feedback-section {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,101 @@
+/*
+Author: Akash Mannil
+Date: December 4, 2024
+File Name: about.css
+*/
+
+/* Base Styles for Mobile First */
+
+/* General Layout */
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 10px; /* Smaller padding for mobile */
+}
+
+/* Headings */
+h1, h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+    color: #551A8B;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section p {
+    font-size: 14px; /* Adjusted for smaller screens */
+    line-height: 1.8;
+}
+
+/* Ordered List Styling */
+ol {
+    padding-left: 15px; /* Smaller padding for mobile */
+    font-size: 14px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* New Sections Styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Blockquote Styling */
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #a89e45;
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+/* Guarantee Section */
+strong {
+    font-weight: bold;
+    color: #a89e45;
+    transform: scale(1.1);
+}
+
+/* Media Queries for Tablet and Larger Devices */
+
+/* Tablet Styles (Min-width 768px) */
+@media (min-width: 768px) {
+    main {
+        padding: 0 30px; /* Increase padding for tablets */
+    }
+
+    h1, h2 {
+        font-size: 28px; /* Increase font size for tablets */
+    }
+
+    ol {
+        padding-left: 20px; /* More padding for tablets */
+    }
+
+    section p {
+        font-size: 16px; /* Increase paragraph font size for tablets */
+    }
+
+    nav ul {
+        grid-template-columns: repeat(3, 1fr); /* Adjust columns for tablet navigation */
+    }
+}
+
+/* Desktop Styles (Min-width 1025px) */
+@media (min-width: 1025px) {
+    main {
+        padding: 0 40px; /* Larger padding for desktops */
+    }
+
+    h1, h2 {
+        font-size: 32px; /* Larger font size for desktop */
+    }
+
+    nav ul {
+        grid-template-columns: repeat(4, 1fr); /* Adjust columns for desktop navigation */
+    }
+}

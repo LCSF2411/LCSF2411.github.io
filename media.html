@@ -4,34 +4,126 @@
 <html lang="en">
 
 <head>
-    <title>Circular Saws: Media</title>
+    <title>ArcBlade Works: Media</title>
     <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Use the header area for the website name or logo -->
     <header>
-        <img src="images/logo.png" alt="ArcBlade Works Logo" width="100" height="100">
-        <h1><a href="index.html">ArcBlade Works</a></h1>
+        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
+        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
     </header>
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
     <nav>
-        <p>&#9672; &nbsp; <a href="index.html">Home</a> &nbsp; &#9672; &nbsp;
-            <a href="about.html">About</a> &nbsp; &#9672; &nbsp;
-            <a href="team.html">Our Team</a> &nbsp; &#9672; &nbsp;
-            <a href="specials.html">Specials</a> &nbsp; &#9672; &nbsp;
-            <a href="training.html">Training</a> &nbsp; &#9672; &nbsp;
-            <a href="media.html">Media</a> &nbsp; &#9672; &nbsp;
-            <a href="faqs.html">FAQs</a> &nbsp; &#9672; &nbsp;
-            <a href="contact.html">Contact Us</a>
-        </p>
+        <ul id="menu-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+            <li><a href="specials.html">SPECIALS</a></li>
+            <li><a href="training.html">TRAINING</a></li>
+            <li><a href="media.html" class="activated-route">MEDIA</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <div id="menu-links-mob">
+            <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+            </a>
+        </div>
     </nav>
+
+    <div class="main-banner">
+        <img src="images/media-main-banner.jpg" alt="Gallery image"
+            class="img-banner">
+    </div>
 
     <!-- Use the main area to add the main content of the webpage -->
     <main>
+
+        <!-- Section 1: Introduction -->
+        <section class="intro">
+            <h2>Welcome to Our Media Gallery</h2>
+            <p>Explore a variety of multimedia content, including audio clips, videos, and more. Learn about our
+                products and brand through visual and audio experiences.</p>
+        </section>
+
+        <div class="audio-video-section">
+
+            <!-- Section 2: Video Component -->
+            <section class="video-section">
+                <h2>Video: How Our Circular Saws Are Made</h2>
+                <p>Watch this video to get an inside look at how we manufacture our high-quality circular saws.</p>
+                <video controls>
+                    <source src="media/product_video.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+
+            <!-- Section 3: Audio Component -->
+            <section class="audio-section">
+                <h2>Audio: Product Overview</h2>
+                <p>Listen to our latest product overview in this audio clip.</p>
+                <audio controls>
+                    <source src="media/product_overview.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+
+        </div>
+
+        <!-- Section 4: Product Demonstration -->
+        <section class="demo-section">
+            <h2>Product Demonstration</h2>
+            <p>Check out this demonstration video to see how our circular saws perform in action.</p>
+            <iframe src="https://www.youtube.com/embed/IjTV7NatJ5U?si=Tswg44wedHgksSOS"
+                title="Product Demonstration"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+
+        <!-- Section 5: Behind the Scenes -->
+        <section class="behind-the-scenes">
+            <h2>Behind the Scenes: Manufacturing Process</h2>
+            <p>Get a behind-the-scenes look at how we produce our precision tools at ArcBlade Works.</p>
+            <img src="images/media-behind-the-scenes.jpg"
+                alt="Behind the Scenes" class="responsive-img">
+        </section>
+
+        <!-- Section 6: Customer Testimonials -->
+        <section class="testimonials">
+            <h2>Customer Testimonials</h2>
+            <p>Our customers share their experiences with our products and services.</p>
+            <div class="testimonial-item">
+                <p>"ArcBlade Works' circular saws are the most reliable tools I've ever used!" - John D., Professional
+                    Carpenter</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"The quality and durability are outstanding. Highly recommend to anyone in the industry." - Sarah L.,
+                    DIY Enthusiast</p>
+            </div>
+        </section>
+
+        <!-- Section 7: Social Media -->
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <p>Stay updated with our latest media releases and updates by following us on social media:</p>
+            <ul>
+                <li><a href="https://facebook.com/arcbladeworks" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/arcbladeworks" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com/arcbladeworks" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
 
     </main>
 
@@ -41,6 +133,8 @@
         <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
         <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 

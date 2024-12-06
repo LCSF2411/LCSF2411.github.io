@@ -6,28 +6,39 @@
 <head>
     <title>ArcBlade Works: Template</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Use the header area for the website name or logo -->
     <header>
-        <img src="images/logo.png" alt="ArcBlade Works Logo" width="100" height="100">
-        <h1><a href="index.html">ArcBlade Works</a></h1>
+        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
+        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
     </header>
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
     <nav>
-        <p>&#9672; &nbsp; <a href="index.html">Home</a> &nbsp; &#9672; &nbsp;
-            <a href="about.html">About</a> &nbsp; &#9672; &nbsp;
-            <a href="team.html">Our Team</a> &nbsp; &#9672; &nbsp;
-            <a href="specials.html">Specials</a> &nbsp; &#9672; &nbsp;
-            <a href="training.html">Training</a> &nbsp; &#9672; &nbsp;
-            <a href="media.html">Media</a> &nbsp; &#9672; &nbsp;
-            <a href="faqs.html">FAQs</a> &nbsp; &#9672; &nbsp;
-            <a href="contact.html">Contact Us</a>
-        </p>
+        <ul id="menu-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+            <li><a href="specials.html">SPECIALS</a></li>
+            <li><a href="training.html">TRAINING</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <div id="menu-links-mob">
+            <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+            </a>
+        </div>
     </nav>
 
     <!-- Use the main area to add the main content of the webpage -->
@@ -41,6 +52,8 @@
         <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
         <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 

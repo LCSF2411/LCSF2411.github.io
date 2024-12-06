@@ -6,32 +6,196 @@
 <head>
     <title>ArcBlade Works: Training</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/training.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Use the header area for the website name or logo -->
     <header>
-        <img src="images/logo.png" alt="ArcBlade Works Logo" width="100" height="100">
-        <h1><a href="index.html">ArcBlade Works</a></h1>
+        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
+        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
     </header>
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
     <nav>
-        <p>&#9672; &nbsp; <a href="index.html">Home</a> &nbsp; &#9672; &nbsp;
-            <a href="about.html">About</a> &nbsp; &#9672; &nbsp;
-            <a href="team.html">Our Team</a> &nbsp; &#9672; &nbsp;
-            <a href="specials.html">Specials</a> &nbsp; &#9672; &nbsp;
-            <a href="training.html">Training</a> &nbsp; &#9672; &nbsp;
-            <a href="media.html">Media</a> &nbsp; &#9672; &nbsp;
-            <a href="faqs.html">FAQs</a> &nbsp; &#9672; &nbsp;
-            <a href="contact.html">Contact Us</a>
-        </p>
+        <ul id="menu-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="team.html">OUR TEAM</a></li>
+            <li><a href="specials.html">SPECIALS</a></li>
+            <li><a href="training.html" class="activated-route">TRAINING</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <div id="menu-links-mob">
+            <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+            </a>
+        </div>
     </nav>
+    
+    <div class="main-banner">
+        <img src="images/training-main-banner.png"
+            alt="Training image" class="img-banner">
+    </div>
+    
 
     <!-- Use the main area to add the main content of the webpage -->
     <main>
+
+        <section class="intro">
+            <h2>Welcome to ArcBlade Works Product Training</h2>
+            <p>We offer online product training sessions for our customers and partners. These sessions are designed to help you understand how to use our tools and accessories effectively. Browse the schedule below to sign up for upcoming sessions.</p>
+        </section>
+
+        <section class="training-schedule">
+            <h2>Product Training Schedule</h2>
+            <table>
+                <caption class="table-caption-center">Upcoming Online Training Sessions</caption>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Length</th>
+                        <th>Room</th>
+                        <th>Instructor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://www.traverscanada.com/media/catalog/product/9/4/94-031-760.jpg?optimize=high&fit=bounds&height=450&width=450&canvas=450:450" alt="Circular Saw" class="product-img"> Circular Saw</td>
+                        <td>Jan 10, 2024</td>
+                        <td>$99</td>
+                        <td>2 Hours</td>
+                        <td>Room 1</td>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://cdn.rona.ca/images/32515144_L.jpg" alt="Compact Circular Saw" class="product-img"> Compact Circular Saw</td>
+                        <td>Jan 15, 2024</td>
+                        <td>$79</td>
+                        <td>1.5 Hours</td>
+                        <td>Room 2</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/I/61qS3UuiAjL.jpg" alt="Metal Cutting Saw" class="product-img"> Metal Cutting Saw</td>
+                        <td>Jan 20, 2024</td>
+                        <td>$120</td>
+                        <td>2 Hours</td>
+                        <td>Room 1</td>
+                        <td>Alice Johnson</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://image.made-in-china.com/226f3j00eZmcGEdgLnqR/Factory-Supplier-Portable-Lithium-Electric-Circular-Saw-Woodworking-Disc-Saw-Wireless-Cutter.webp" alt="Woodworking Circular Saw" class="product-img"> Woodworking Circular Saw</td>
+                        <td>Jan 25, 2024</td>
+                        <td>$150</td>
+                        <td>2.5 Hours</td>
+                        <td>Room 3</td>
+                        <td>Bob Brown</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://store.evolutionpowertools.com/cdn/shop/products/01_73ba9aa5-ac33-417a-9fd0-d5e4862d7268_1024x1024.jpg?v=1600697442" alt="Multi-material Saw" class="product-img"> Multi-material Saw</td>
+                        <td>Feb 5, 2024</td>
+                        <td>$180</td>
+                        <td>3 Hours</td>
+                        <td>Room 2</td>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://turkstralumber.com/cdn/shop/collections/Circular_Saws_Collection_Thumbnail.jpg?v=1712846674" alt="Precision Cutting Saw" class="product-img"> Precision Cutting Saw</td>
+                        <td>Feb 10, 2024</td>
+                        <td>$110</td>
+                        <td>1.5 Hours</td>
+                        <td>Room 1</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/I/61g0a6IDztL.jpg" alt="Angle Grinder" class="product-img"> Angle Grinder</td>
+                        <td>Feb 15, 2024</td>
+                        <td>$99</td>
+                        <td>2 Hours</td>
+                        <td>Room 2</td>
+                        <td>Alice Johnson</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/I/61sy8QUxtzL.jpg" alt="Table Saw" class="product-img"> Table Saw</td>
+                        <td>Feb 20, 2024</td>
+                        <td>$220</td>
+                        <td>3 Hours</td>
+                        <td>Room 3</td>
+                        <td>Bob Brown</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://www.hazmasters.com/assets/media/g10066/MKTADSS501Z-1078652242.jpg" alt="Cordless Circular Saw" class="product-img"> Cordless Circular Saw</td>
+                        <td>Mar 1, 2024</td>
+                        <td>$140</td>
+                        <td>2 Hours</td>
+                        <td>Room 1</td>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://m.media-amazon.com/images/I/61bmOcw9NsL.jpg" alt="Tile Cutter" class="product-img"> Tile Cutter</td>
+                        <td>Mar 5, 2024</td>
+                        <td>$90</td>
+                        <td>1 Hour</td>
+                        <td>Room 2</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://www.hazmasters.com/assets/media/g10088/MILW2734-21_2734-21-1045345931.jpg" alt="Miter Saw" class="product-img"> Miter Saw</td>
+                        <td>Mar 10, 2024</td>
+                        <td>$200</td>
+                        <td>2.5 Hours</td>
+                        <td>Room 1</td>
+                        <td>Alice Johnson</td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://images.homedepot.ca/productimages/p_1001761773.jpg?product-images=l" alt="Jigsaw" class="product-img"> Jigsaw</td>
+                        <td>Mar 15, 2024</td>
+                        <td>$75</td>
+                        <td>1.5 Hours</td>
+                        <td>Room 3</td>
+                        <td>Bob Brown</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="training-details">
+            <h2>Training Details</h2>
+            <p>Our training sessions are designed to help you get the most out of our products. Whether you're a DIY enthusiast or a professional, our instructors will guide you through best practices, tips, and techniques. Here's what you'll learn:</p>
+            <ul class="training-details">
+                <li>Product Overview and Features</li>
+                <li>Step-by-step assembly and setup</li>
+                <li>How to safely operate our tools</li>
+                <li>Maintenance tips to ensure long-lasting performance</li>
+            </ul>
+        </section>
+
+        <section class="registration">
+            <h2>How to Register</h2>
+            <p>To register for any of the training sessions listed above, simply fill out the registration form on our website. Be sure to provide your contact details and select the session you'd like to attend. After registration, you'll receive a confirmation email with further instructions.</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>If you have any questions about our training sessions, feel free to reach out to us at:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a></li>
+                <li>Phone: 1-800-123-4567</li>
+                <li>Address: 123 Industrial Drive, Sarnia, ON, Canada</li>
+            </ul>
+        </section>
 
     </main>
 
@@ -41,6 +205,8 @@
         <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
         <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 

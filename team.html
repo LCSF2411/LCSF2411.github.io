@@ -6,32 +6,115 @@
 <head>
     <title>ArcBlade Works: Team</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <!-- Use the header area for the website name or logo -->
     <header>
-        <img src="images/logo.png" alt="ArcBlade Works Logo" width="100" height="100">
-        <h1><a href="index.html">ArcBlade Works</a></h1>
+        <a href="index.html" class="logo-link"><img src="images/logo.png" class="img-logo" alt="ArcBlade Works Logo"></a>
+        <h1><a href="index.html">ARCBLADE WORKS</a></h1>
     </header>
 
     <!-- Use the nav area to add hyperlinks to other pages within the website -->
     <nav>
-        <p>&#9672; &nbsp; <a href="index.html">Home</a> &nbsp; &#9672; &nbsp;
-            <a href="about.html">About</a> &nbsp; &#9672; &nbsp;
-            <a href="team.html">Our Team</a> &nbsp; &#9672; &nbsp;
-            <a href="specials.html">Specials</a> &nbsp; &#9672; &nbsp;
-            <a href="training.html">Training</a> &nbsp; &#9672; &nbsp;
-            <a href="media.html">Media</a> &nbsp; &#9672; &nbsp;
-            <a href="faqs.html">FAQs</a> &nbsp; &#9672; &nbsp;
-            <a href="contact.html">Contact Us</a>
-        </p>
+        <ul id="menu-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="team.html" class="activated-route">OUR TEAM</a></li>
+            <li><a href="specials.html">SPECIALS</a></li>
+            <li><a href="training.html">TRAINING</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <div id="menu-links-mob">
+            <a class="menu-icon" onclick="hamburger()">
+                <div>&#9776;</div>
+            </a>
+        </div>
     </nav>
-
+    
+    <div class="main-banner">
+        <img src="images/team-main-banner.webp"
+            alt="Team image" class="img-banner">
+    </div>
+    
     <!-- Use the main area to add the main content of the webpage -->
     <main>
+
+        <article class="who-we-are">
+            <header>
+                <h2>Who We Are</h2>
+            </header>
+            <p>At ArcBlade Works, we pride ourselves on having a diverse and talented team that drives innovation and quality in the power tool industry. From our leadership team to our dedicated employees in sales, marketing, and production, everyone plays a vital role in helping us deliver the best products to our customers.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <figure>
+                        <img src="https://randomuser.me/api/portraits/lego/2.jpg" alt="John Doe, CEO">
+                        <figcaption>John Doe - CEO</figcaption>
+                    </figure>
+                    <p>John leads the company with over 20 years of experience in the manufacturing industry. He is passionate about innovation and the development of cutting-edge tools.</p>
+                </div>
+                <div class="team-member">
+                    <figure>
+                        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Jane Smith, Marketing Director">
+                        <figcaption>Jane Smith - Marketing Director</figcaption>
+                    </figure>
+                    <p>Jane brings a wealth of expertise in digital marketing and customer engagement, ensuring our brand message reaches and resonates with a broad audience.</p>
+                </div>
+                <div class="team-member">
+                    <figure>
+                        <img src="https://randomuser.me/api/portraits/lego/6.jpg" alt="Dwayne Johnson, Sales Representative">
+                        <figcaption>Dwayne Johnson - Sales Representative</figcaption>
+                    </figure>
+                    <p>Dwayne works closely with our customers, ensuring they find the right tools and helping ArcBlade maintain strong relationships with distributors.</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="our-story">
+            <h2>Our Story</h2>
+            <p>Founded in 1998, ArcBlade Works has grown from a small workshop in Sarnia, Ontario, to a trusted name in the power tool industry. Our vision of delivering high-performance circular saws and innovative power tools has been at the core of our success. With a commitment to quality and sustainability, we continue to lead the way in creating cutting-edge tools that meet the evolving needs of professionals and DIY enthusiasts alike.</p>
+        </section>
+
+        <aside class="company-vision">
+            <h2>Our Vision for the Future</h2>
+            <p>Looking ahead, we plan to expand our product range, introduce new technologies, and continue our commitment to customer satisfaction. We aim to redefine the standards of quality in the power tool industry, providing users with innovative and reliable tools for years to come.</p>
+        </aside>
+
+        <section class="why-join-us">
+            <h2>Why Join Us</h2>
+            <p>At ArcBlade Works, we offer more than just a job. We provide a thriving work environment that promotes creativity, collaboration, and career growth. Whether you're interested in leadership, production, or marketing, there's a place for you to make a significant impact.</p>
+            <ul>
+                <li>Competitive salary and benefits.</li>
+                <li>Opportunities for career advancement and development.</li>
+                <li>A collaborative and innovative work culture.</li>
+                <li>A chance to be part of a company that is committed to sustainability and excellence.</li>
+            </ul>
+        </section>
+
+        <article class="employee-spotlight">
+            <h2>Employee Spotlight</h2>
+            <p>Each month, we highlight one of our employees who has gone above and beyond to contribute to the success of ArcBlade Works. Their dedication and hard work are what make us who we are.</p>
+            <figure class="employee-spotlight-img">
+                <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="Employee of the Month">
+                <figcaption>Sarah Lee - Production Specialist</figcaption>
+            </figure>
+            <p>Sarah has been with us for over 5 years and plays a crucial role in the production of our circular saws. Her attention to detail and commitment to quality make her an invaluable member of our team.</p>
+        </article>
+
+        <section class="company-culture">
+            <h2>Our Company Culture</h2>
+            <p>At ArcBlade Works, we foster a culture of respect, innovation, and teamwork. We believe in empowering our employees, encouraging creativity, and creating a collaborative environment where everyone's contributions are valued. We are dedicated to making ArcBlade Works a great place to work and grow professionally.</p>
+        </section>
 
     </main>
 
@@ -41,6 +124,8 @@
         <p><a href="mailto:support@arcbladeworks.com">Request information</a></p>
         <p>Akash Mannil &nbsp; &nbsp; C0952939</p>
     </footer>
+
+    <script src="scripts/script.js"></script>
 
 </body>
 
