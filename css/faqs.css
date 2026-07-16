@@ -1,35 +1,104 @@
-/* faqs.css — page-specific layout (dark theme). Global tokens in styles.css */
+/* faqs.css — accessible <details> accordions. Global tokens live in styles.css */
 
-.intro { max-width: 60ch; }
-.intro p { font-size: var(--fs-lead); color: var(--muted); }
-.intro a, .faq-item a, .support-section a { color: var(--accent-soft); }
+/* smooth height animation for details in supporting browsers;
+   everywhere else the accordion simply opens instantly */
+:root { interpolate-size: allow-keywords; }
 
-.faq-section h2 { margin: 2.5rem 0 1.2rem; font-size: var(--fs-h3); color: var(--accent); letter-spacing: 0.02em; }
-.faq-section h2:first-child { margin-top: 0; }
+.faq-group { max-width: 860px; }
+.faq-group h2 {
+    font-size: var(--fs-h3);
+    color: var(--ember-deep);
+    margin: 2.6rem 0 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.faq-group h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+.faq-group h2:first-of-type { margin-top: 0; }
 
 .faq-item {
-    background: var(--panel);
+    background: var(--card);
     border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 1.3rem 1.5rem;
-    margin-bottom: 0.9rem;
-    transition: border-color 0.35s var(--ease), background 0.35s var(--ease);
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.8rem;
+    box-shadow: var(--shadow-1);
+    transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
-.faq-item:hover { border-color: var(--line-2); background: var(--panel-2); }
-.faq-item h3 {
-    font-size: 1.02rem;
-    margin-bottom: 0.5rem;
-    color: var(--ink);
-    position: relative;
-    padding-left: 1.4rem;
-}
-.faq-item h3::before { content: "?"; position: absolute; left: 0; color: var(--accent); font-family: var(--display); }
-.faq-item p { font-size: 0.96rem; }
+.faq-item:hover { border-color: var(--line-2); }
+.faq-item[open] { border-color: var(--ember); box-shadow: var(--shadow-2); }
 
-.support-section, .feedback-section {
-    background: linear-gradient(135deg, rgba(200,137,61,0.14), rgba(143,94,38,0.05));
-    border: 1px solid var(--line-2);
-    border-radius: var(--radius-lg);
-    text-align: center;
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--ink);
+    border-radius: var(--radius-sm);
 }
-.support-section h2, .feedback-section h2 { color: var(--ink); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--ember-deep); }
+
+/* plus that becomes a minus */
+.faq-icon {
+    flex: none;
+    position: relative;
+    width: 30px; height: 30px;
+    border: 1px solid var(--line-2);
+    border-radius: 50%;
+    transition: background 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.4s var(--ease);
+}
+.faq-icon::before, .faq-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 12px; height: 2px;
+    background: var(--ink);
+    translate: -50% -50%;
+    transition: rotate 0.4s var(--ease), background 0.3s var(--ease);
+}
+.faq-icon::after { rotate: 90deg; }
+.faq-item[open] .faq-icon { background: var(--ember); border-color: var(--ember); transform: rotate(180deg); }
+.faq-item[open] .faq-icon::before, .faq-item[open] .faq-icon::after { background: #FFF6EE; }
+.faq-item[open] .faq-icon::after { rotate: 0deg; }
+
+.faq-item::details-content {
+    height: 0;
+    overflow: clip;
+    opacity: 0;
+    transition: height 0.45s var(--ease), opacity 0.4s var(--ease), content-visibility 0.45s allow-discrete;
+}
+.faq-item[open]::details-content {
+    height: auto;
+    opacity: 1;
+}
+.faq-body { padding: 0 1.3rem 1.3rem; }
+.faq-body p { font-size: 0.98rem; }
+
+/* still stuck / feedback panels */
+.help-duo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+}
+@media (min-width: 820px) { .help-duo { grid-template-columns: 1fr 1fr; } }
+.help-card {
+    background:
+        radial-gradient(80% 130% at 0% 0%, var(--ember-tint), transparent 60%),
+        var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.6rem, 3.5vw, 2.4rem);
+    box-shadow: var(--shadow-1);
+}
+.help-card h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: 0.6rem; }
+.help-card .btn { margin-top: 1.3rem; }

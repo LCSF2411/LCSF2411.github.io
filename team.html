@@ -6,78 +6,88 @@
     <title>ArcBlade Works — Our Team</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0E0E10">
+    <meta name="theme-color" content="#FAF6EF">
     <meta name="description" content="Meet the people behind ArcBlade Works — a diverse, talented team driving innovation and quality in the power tool industry.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <p class="announce"><strong>Summer tune-up:</strong> free shipping over $99 · 30-day returns · 2-year warranty</p>
 
     <header class="site-header" id="siteHeader">
         <a href="index.html" class="brand">
-            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <img src="images/logo.png" class="brand-mark" width="44" height="44" alt="ArcBlade Works logo">
             <span class="brand-word">ARCBLADE<em>WORKS</em></span>
         </a>
         <nav class="site-nav" aria-label="Primary">
             <ul id="menu-links" class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="showcase.html">Showcase</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="team.html" class="is-active">Team</a></li>
-                <li><a href="specials.html">Specials</a></li>
+                <li><a href="showcase.html">Shop</a></li>
+                <li><a href="specials.html">Deals</a></li>
                 <li><a href="training.html">Training</a></li>
                 <li><a href="media.html">Media</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html" class="is-active" aria-current="page">Team</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
-            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+            <button class="menu-icon" id="menuToggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu">
                 <span></span><span></span><span></span>
             </button>
         </nav>
     </header>
 
-    <div class="main-banner">
-        <img src="images/team-main-banner.webp" alt="The ArcBlade Works team" class="img-banner" loading="eager" fetchpriority="high" data-parallax="0.16">
-        <div class="banner-inner reveal">
-            <span class="eyebrow">Our People</span>
-            <h1>The hands behind the tools.</h1>
-            <p class="lead">A diverse, talented team driving innovation and quality across everything we make.</p>
-        </div>
-    </div>
+    <main id="main">
 
-    <main>
+        <section class="page-head">
+            <p class="eyebrow">Our people</p>
+            <h1>The hands <em>behind the tools.</em></h1>
+            <p class="lead">A diverse, talented team driving innovation and quality across everything we make.</p>
+        </section>
+
+        <div class="page-visual">
+            <figure>
+                <img src="images/team-main-banner.webp" alt="The ArcBlade Works team in the workshop" loading="eager" fetchpriority="high" data-parallax="0.07">
+            </figure>
+        </div>
+
+        <!-- MEMBERS -->
         <article class="who-we-are">
-            <span class="eyebrow">Who we are</span>
-            <h2>A team that drives innovation.</h2>
-            <p class="lead">From our leadership to our people in sales, marketing and production, everyone plays a vital
-                role in helping us deliver the best products to our customers.</p>
-            <div class="team-members">
+            <div class="section-head">
+                <p class="eyebrow">Who we are</p>
+                <h2>A team that drives innovation.</h2>
+                <p class="lead">From our leadership to our people in sales, marketing and production, everyone plays a
+                    vital role in helping us deliver the best products to our customers.</p>
+            </div>
+            <div class="team-members" data-stagger>
                 <div class="team-member">
                     <figure>
-                        <img src="https://randomuser.me/api/portraits/lego/2.jpg" alt="John Doe, CEO" loading="lazy" decoding="async">
-                        <figcaption>John Doe — CEO</figcaption>
+                        <img src="https://randomuser.me/api/portraits/lego/2.jpg" alt="Portrait of John Doe" loading="lazy" decoding="async" width="116" height="116">
+                        <figcaption><strong>John Doe</strong><span>Chief Executive Officer</span></figcaption>
                     </figure>
                     <p>John leads the company with over 20 years of experience in manufacturing. He is passionate about
                         innovation and the development of cutting-edge tools.</p>
                 </div>
                 <div class="team-member">
                     <figure>
-                        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Jane Smith, Marketing Director" loading="lazy" decoding="async">
-                        <figcaption>Jane Smith — Marketing Director</figcaption>
+                        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Portrait of Jane Smith" loading="lazy" decoding="async" width="116" height="116">
+                        <figcaption><strong>Jane Smith</strong><span>Marketing Director</span></figcaption>
                     </figure>
-                    <p>Jane brings a wealth of expertise in digital marketing and customer engagement, ensuring our brand
-                        message resonates with a broad audience.</p>
+                    <p>Jane brings a wealth of expertise in digital marketing and customer engagement, ensuring our
+                        brand message resonates with a broad audience.</p>
                 </div>
                 <div class="team-member">
                     <figure>
-                        <img src="https://randomuser.me/api/portraits/lego/6.jpg" alt="Dwayne Johnson, Sales Representative" loading="lazy" decoding="async">
-                        <figcaption>Dwayne Johnson — Sales Representative</figcaption>
+                        <img src="https://randomuser.me/api/portraits/lego/6.jpg" alt="Portrait of Dwayne Johnson" loading="lazy" decoding="async" width="116" height="116">
+                        <figcaption><strong>Dwayne Johnson</strong><span>Sales Representative</span></figcaption>
                     </figure>
                     <p>Dwayne works closely with our customers, ensuring they find the right tools and helping ArcBlade
                         maintain strong relationships with distributors.</p>
@@ -85,27 +95,55 @@
             </div>
         </article>
 
-        <section class="our-story">
-            <span class="eyebrow">Our Story</span>
-            <h2>Grown from a single workshop.</h2>
-            <p>Founded in 1998, ArcBlade Works has grown from a small workshop in Sarnia, Ontario, to a trusted name in
-                the power tool industry. Our vision of delivering high-performance circular saws and innovative power
-                tools has been at the core of our success.</p>
+        <!-- SPOTLIGHT -->
+        <section aria-labelledby="spotlight-title">
+            <div class="spotlight">
+                <figure>
+                    <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="Portrait of Sarah Lee" loading="lazy" decoding="async" width="170" height="170">
+                    <figcaption>Sarah Lee <span>Production Specialist</span></figcaption>
+                </figure>
+                <div>
+                    <p class="eyebrow">Employee spotlight</p>
+                    <h2 id="spotlight-title">Sarah Lee.</h2>
+                    <p>Each month we highlight an employee who has gone above and beyond. Their dedication and hard
+                        work are what make us who we are.</p>
+                    <p>Sarah has been with us for over 5 years and plays a crucial role in the production of our
+                        circular saws. Her attention to detail and commitment to quality make her invaluable to our
+                        team.</p>
+                </div>
+            </div>
         </section>
 
-        <aside class="company-vision">
-            <span class="eyebrow">Vision</span>
-            <h2>Our vision for the future.</h2>
-            <p>Looking ahead, we plan to expand our product range, introduce new technologies, and continue our
-                commitment to customer satisfaction — redefining the standards of quality in the power tool industry.</p>
-        </aside>
+        <!-- STORY BAND -->
+        <section class="band">
+            <div class="band-inner duo-grid">
+                <div>
+                    <p class="eyebrow">Our story</p>
+                    <h2>Grown from a single workshop.</h2>
+                    <p>Founded in 1998, ArcBlade Works has grown from a small workshop in Sarnia, Ontario, to a trusted
+                        name in the power tool industry. Our vision of delivering high-performance circular saws and
+                        innovative power tools has been at the core of our success.</p>
+                </div>
+                <div>
+                    <p class="eyebrow">Vision</p>
+                    <h2>Where we're headed.</h2>
+                    <p>Looking ahead, we plan to expand our product range, introduce new technologies, and continue our
+                        commitment to customer satisfaction — redefining the standards of quality in the power tool
+                        industry.</p>
+                </div>
+            </div>
+        </section>
 
-        <section class="why-join-us">
-            <span class="eyebrow">Careers</span>
-            <h2>Why join us.</h2>
-            <p>We provide a thriving work environment that promotes creativity, collaboration and career growth. Whether
-                you're interested in leadership, production or marketing, there's a place for you to make an impact.</p>
-            <ul>
+        <!-- CAREERS -->
+        <section>
+            <div class="section-head">
+                <p class="eyebrow">Careers</p>
+                <h2>Why join us.</h2>
+                <p class="lead">We provide a thriving work environment that promotes creativity, collaboration and
+                    career growth. Whether you're interested in leadership, production or marketing, there's a place
+                    for you to make an impact.</p>
+            </div>
+            <ul class="perk-list" data-stagger>
                 <li>Competitive salary and benefits.</li>
                 <li>Opportunities for career advancement and development.</li>
                 <li>A collaborative and innovative work culture.</li>
@@ -113,25 +151,21 @@
             </ul>
         </section>
 
-        <article class="employee-spotlight">
-            <span class="eyebrow">Employee Spotlight</span>
-            <h2>Sarah Lee.</h2>
-            <p>Each month we highlight an employee who has gone above and beyond. Their dedication and hard work are what
-                make us who we are.</p>
-            <figure class="employee-spotlight-img">
-                <img src="https://randomuser.me/api/portraits/lego/7.jpg" alt="Sarah Lee, Production Specialist" loading="lazy" decoding="async">
-                <figcaption>Sarah Lee — Production Specialist</figcaption>
-            </figure>
-            <p>Sarah has been with us for over 5 years and plays a crucial role in the production of our circular saws.
-                Her attention to detail and commitment to quality make her invaluable to our team.</p>
-        </article>
-
-        <section class="company-culture">
-            <span class="eyebrow">Culture</span>
-            <h2>How we work together.</h2>
-            <p>We foster a culture of respect, innovation and teamwork. We believe in empowering our employees,
-                encouraging creativity, and creating a collaborative environment where everyone's contributions are
-                valued.</p>
+        <!-- CULTURE -->
+        <section class="duo-grid">
+            <div>
+                <p class="eyebrow">Culture</p>
+                <h2>How we work together.</h2>
+                <p>We foster a culture of respect, innovation and teamwork. We believe in empowering our employees,
+                    encouraging creativity, and creating a collaborative environment where everyone's contributions
+                    are valued.</p>
+            </div>
+            <div>
+                <p class="eyebrow">Join the bench</p>
+                <h2>Sound like your kind of shop?</h2>
+                <p>We're always happy to hear from toolmakers, designers and people who love the craft.
+                    <a href="contact.html">Get in touch</a> and tell us what you'd build with us.</p>
+            </div>
         </section>
     </main>
 
@@ -139,22 +173,43 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <span class="brand-word">ARCBLADE<em>WORKS</em></span>
-                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+                <p class="footer-tag">Precision saws and blades for people who love the craft.
+                    Engineered in Sarnia, Ontario since 1998.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/arcbladeworks" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://facebook.com/arcbladeworks" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/arcbladeworks" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://linkedin.com/company/arcbladeworks" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
-            <nav class="footer-links" aria-label="Footer">
-                <a href="showcase.html">Showcase</a>
-                <a href="specials.html">Specials</a>
-                <a href="training.html">Training</a>
-                <a href="contact.html">Contact</a>
+            <nav aria-label="Shop">
+                <p class="footer-head">Shop</p>
+                <div class="footer-links">
+                    <a href="showcase.html">All products</a>
+                    <a href="specials.html">Deals</a>
+                    <a href="training.html">Training</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </nav>
+            <nav aria-label="Company">
+                <p class="footer-head">Company</p>
+                <div class="footer-links">
+                    <a href="about.html">About us</a>
+                    <a href="team.html">Our team</a>
+                    <a href="faqs.html">FAQs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
             </nav>
             <div class="footer-contact">
+                <p class="footer-head">Get in touch</p>
                 <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
                 <a href="tel:+18001234567">1-800-123-4567</a>
+                <address>123 Industrial Drive<br>Sarnia, ON, Canada</address>
             </div>
         </div>
         <div class="footer-base">
-            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
-            <p>Akash Mannil · C0952939</p>
+            <p>&copy; 2026 ArcBlade Works. All rights reserved. · Akash Mannil · C0952939</p>
+            <div class="pay-chips" aria-hidden="true"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></div>
         </div>
     </footer>
 
