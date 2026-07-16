@@ -273,6 +273,7 @@ main > :last-child { padding-bottom: var(--section-y); }
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
 }
+.site-header.scrolled::before { background: rgba(12, 12, 14, 0.86); }
 .site-header.scrolled {
     border-bottom-color: var(--line);
     box-shadow: 0 8px 24px -18px rgba(60, 42, 24, 0.35);
