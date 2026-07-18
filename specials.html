@@ -1,127 +1,175 @@
 <!DOCTYPE html>
-<!-- ArcBlade Works — Specials. Original template: Akash Mannil (C0952939) -->
+<!-- ArcBlade Works — Deals. Original template: Akash Mannil (C0952939) -->
 <html lang="en">
 
 <head>
-    <title>ArcBlade Works — Specials</title>
+    <title>ArcBlade Works — Deals &amp; Specials</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0E0E10">
+    <meta name="theme-color" content="#FAF6EF">
     <meta name="description" content="Exclusive limited-time deals on ArcBlade Works circular saws, blades and safety gear. Save up to 20% on professional power tools.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/showcase.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <p class="announce"><strong>Summer tune-up:</strong> free shipping over $99 · 30-day returns · 2-year warranty</p>
 
     <header class="site-header" id="siteHeader">
         <a href="index.html" class="brand">
-            <img src="images/logo.png" class="brand-mark" width="42" height="42" alt="ArcBlade Works logo">
+            <img src="images/logo.png" class="brand-mark" width="44" height="44" alt="ArcBlade Works logo">
             <span class="brand-word">ARCBLADE<em>WORKS</em></span>
         </a>
         <nav class="site-nav" aria-label="Primary">
             <ul id="menu-links" class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="showcase.html">Showcase</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="specials.html" class="is-active">Specials</a></li>
+                <li><a href="showcase.html">Shop</a></li>
+                <li><a href="specials.html" class="is-active" aria-current="page">Deals</a></li>
                 <li><a href="training.html">Training</a></li>
                 <li><a href="media.html">Media</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
                 <li><a href="faqs.html">FAQs</a></li>
                 <li><a href="contact.html" class="nav-cta">Contact</a></li>
             </ul>
-            <button class="menu-icon" id="menuToggle" onclick="hamburger()" aria-label="Toggle menu" aria-expanded="false">
+            <button class="menu-icon" id="menuToggle" aria-expanded="false" aria-controls="menu-links" aria-label="Open menu">
                 <span></span><span></span><span></span>
             </button>
         </nav>
     </header>
 
-    <div class="main-banner">
-        <img src="images/specials-main-banner.jpg" alt="ArcBlade Works special offers" class="img-banner" loading="eager" fetchpriority="high" data-parallax="0.16">
-        <div class="banner-inner reveal">
-            <span class="eyebrow">Limited time</span>
-            <h1>Exclusive deals, serious savings.</h1>
-            <p class="lead">Unbeatable prices on our high-performance circular saws — for professionals and DIY enthusiasts alike.</p>
+    <main id="main">
+
+        <section class="page-head">
+            <p class="eyebrow">Limited time</p>
+            <h1>Deals worth <em>the sawdust.</em></h1>
+            <p class="lead">Unbeatable prices on our high-performance circular saws — for professionals and DIY
+                enthusiasts alike. Prefer to browse everything? Head to the <a href="showcase.html">shop</a>.</p>
+        </section>
+
+        <div class="page-visual">
+            <figure>
+                <img src="images/specials-main-banner.jpg" alt="ArcBlade Works circular saws on the workbench" loading="eager" fetchpriority="high" data-parallax="0.07">
+            </figure>
         </div>
-    </div>
 
-    <main>
-        <section class="banner">
-            <span class="eyebrow">Featured</span>
-            <h2>Now is the time to upgrade.</h2>
-            <p>Discover unbeatable deals across the ArcBlade range. Prefer the full-screen experience? Explore the
-                <a href="showcase.html">interactive showcase</a>.</p>
+        <!-- OFFERS -->
+        <section aria-labelledby="offers-title">
+            <div class="section-head">
+                <p class="eyebrow">This week's offers</p>
+                <h2 id="offers-title">Four deals, all tested, all covered.</h2>
+            </div>
+            <div class="p-grid" style="--p-cols: 2" data-stagger>
+                <article class="p-card" data-cat="saws">
+                    <a class="p-media" href="contact.html">
+                        <img src="images/specials-professional-circular-saw.webp" alt="ProCut 1800 professional circular saw" loading="lazy" decoding="async">
+                        <span class="p-badge p-badge--flag">Flagship · 15% off</span>
+                    </a>
+                    <div class="p-body">
+                        <p class="p-cat">Professional series</p>
+                        <h3 class="p-name"><a href="contact.html">ProCut 1800 Circular Saw</a></h3>
+                        <p class="p-rating"><span class="stars" aria-hidden="true">★★★★★</span><span>4.9 (612 reviews)</span></p>
+                        <p class="p-desc">A high-performance saw built for heavy-duty tasks — powerful motor, ergonomic
+                            design, precision and comfort. Limited time only.</p>
+                        <p class="p-price"><strong>$254.99</strong> <s>$299.99</s> <span class="p-save">Save $45</span></p>
+                        <a href="contact.html" class="btn btn--small">Shop now</a>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="saws">
+                    <a class="p-media" href="contact.html">
+                        <img src="images/specials-compact-circular-saw.webp" alt="TrimLine compact circular saw" loading="lazy" decoding="async">
+                        <span class="p-badge p-badge--deal">10% off</span>
+                    </a>
+                    <div class="p-body">
+                        <p class="p-cat">Compact series</p>
+                        <h3 class="p-name"><a href="contact.html">TrimLine Compact Saw</a></h3>
+                        <p class="p-rating"><span class="stars" aria-hidden="true">★★★★★</span><span>4.8 (348 reviews)</span></p>
+                        <p class="p-desc">Perfect for smaller projects — lightweight yet powerful, with precise cuts in
+                            tight spaces. Don't miss this deal.</p>
+                        <p class="p-price"><strong>$161.99</strong> <s>$179.99</s> <span class="p-save">Save $18</span></p>
+                        <a href="contact.html" class="btn btn--small">Shop now</a>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="blades">
+                    <a class="p-media" href="contact.html">
+                        <img src="images/specials-accessory-blades.jpg" alt="Carbide accessory blades" loading="lazy" decoding="async">
+                        <span class="p-badge p-badge--new">Buy 1 get 1</span>
+                    </a>
+                    <div class="p-body">
+                        <p class="p-cat">Blades</p>
+                        <h3 class="p-name"><a href="contact.html">Carbide Blade Kit</a></h3>
+                        <p class="p-rating"><span class="stars" aria-hidden="true">★★★★★</span><span>4.9 (1,204 reviews)</span></p>
+                        <p class="p-desc">Stock up on top-quality blades for wood, metal and plastic. Get an additional
+                            blade free with every purchase.</p>
+                        <p class="p-price"><strong>$49.99</strong> <span class="p-save">2 for 1</span></p>
+                        <a href="contact.html" class="btn btn--small">Claim offer</a>
+                    </div>
+                </article>
+
+                <article class="p-card" data-cat="safety">
+                    <a class="p-media" href="contact.html">
+                        <img src="images/specials-safety-gear.jpg" alt="ProShield safety gear" loading="lazy" decoding="async">
+                        <span class="p-badge p-badge--deal">20% off</span>
+                    </a>
+                    <div class="p-body">
+                        <p class="p-cat">Safety</p>
+                        <h3 class="p-name"><a href="contact.html">ProShield Safety Kit</a></h3>
+                        <p class="p-rating"><span class="stars" aria-hidden="true">★★★★★</span><span>4.7 (289 reviews)</span></p>
+                        <p class="p-desc">Safety first. Equip yourself with top-grade protective gear while enjoying
+                            this limited-time discount.</p>
+                        <p class="p-price"><strong>$79.99</strong> <s>$99.99</s> <span class="p-save">Save $20</span></p>
+                        <a href="contact.html" class="btn btn--small">Shop now</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section class="special-offers">
-            <span class="eyebrow">Offers</span>
-            <h2>Featured offers.</h2>
-
-            <section class="offer-items">
-                <div class="offer-item is-featured">
-                    <span class="ribbon">Flagship · 15% Off</span>
-                    <img src="images/specials-professional-circular-saw.webp" alt="Professional Circular Saw" loading="lazy" decoding="async">
-                    <h3>Professional Circular Saw</h3>
-                    <p><span class="price-now">$254.99</span> &nbsp; <span class="price-was">$299.99</span></p>
-                    <p>A high-performance saw built for heavy-duty tasks — powerful motor, ergonomic design, precision and
-                        comfort. Limited time only.</p>
-                    <p class="shop-now"><a href="contact.html" class="btn">Shop now</a></p>
+        <!-- WHY ARCBLADE -->
+        <section class="band">
+            <div class="band-inner">
+                <div class="section-head centered">
+                    <p class="eyebrow">Why ArcBlade</p>
+                    <h2>25 years behind every deal.</h2>
+                    <p class="lead">We don't just make circular saws — we craft tools that make every project easier
+                        and safer.</p>
                 </div>
-
-                <div class="offer-item">
-                    <span class="ribbon">10% Off</span>
-                    <img src="images/specials-compact-circular-saw.webp" alt="Compact Circular Saw" loading="lazy" decoding="async">
-                    <h3>Compact Circular Saw</h3>
-                    <p><span class="price-now">$161.99</span> &nbsp; <span class="price-was">$179.99</span></p>
-                    <p>Perfect for smaller projects — lightweight yet powerful, with precise cuts in tight spaces. Don't
-                        miss this deal!</p>
-                    <p class="shop-now"><a href="contact.html" class="btn">Shop now</a></p>
+                <div class="tile-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))" data-stagger>
+                    <div class="tile">
+                        <span class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+                        <h3>Precision &amp; innovation</h3>
+                        <p>Designed with the latest technology for flawless cuts every time.</p>
+                    </div>
+                    <div class="tile">
+                        <span class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 8.8-8 11-4.5-2.2-8-6-8-11V5z"/><path d="M8.5 11.5l2.5 2.5 4.5-4.5"/></svg></span>
+                        <h3>Quality &amp; durability</h3>
+                        <p>Rigorously tested to withstand the toughest tasks, year after year.</p>
+                    </div>
+                    <div class="tile">
+                        <span class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21C7 17 3 13.5 3 9.5A4.5 4.5 0 0112 6a4.5 4.5 0 019 3.5c0 4-4 7.5-9 11.5z"/></svg></span>
+                        <h3>Customer commitment</h3>
+                        <p>Exceptional service and warranties to ensure your satisfaction.</p>
+                    </div>
                 </div>
-
-                <div class="offer-item">
-                    <span class="ribbon">Buy 1 Get 1</span>
-                    <img src="images/specials-accessory-blades.jpg" alt="Accessory Blades" loading="lazy" decoding="async">
-                    <h3>Accessory Blades</h3>
-                    <p class="price-now">Buy one, get one free</p>
-                    <p>Stock up on top-quality blades for wood, metal and plastic. Get an additional blade free with every
-                        purchase!</p>
-                    <p class="shop-now"><a href="contact.html" class="btn">Shop now</a></p>
-                </div>
-
-                <div class="offer-item">
-                    <span class="ribbon">20% Off</span>
-                    <img src="images/specials-safety-gear.jpg" alt="Safety Gear" loading="lazy" decoding="async">
-                    <h3>Safety Gear</h3>
-                    <p><span class="price-now">$79.99</span> &nbsp; <span class="price-was">$99.99</span></p>
-                    <p>Safety first. Equip yourself with top-grade protective gear while enjoying this limited-time
-                        discount.</p>
-                    <p class="shop-now"><a href="contact.html" class="btn">Shop now</a></p>
-                </div>
-            </section>
+            </div>
         </section>
 
-        <section class="about-us">
-            <span class="eyebrow">Why ArcBlade</span>
-            <h2>Why choose ArcBlade Works?</h2>
-            <p>We don't just make circular saws — we craft tools that make every project easier and safer. With over 25
-                years in the industry, we're committed to high-performance tools that are built to last.</p>
-            <ul>
-                <li><strong>Precision &amp; Innovation:</strong> designed with the latest technology for flawless cuts every time.</li>
-                <li><strong>Quality &amp; Durability:</strong> rigorously tested to withstand the toughest tasks.</li>
-                <li><strong>Customer Commitment:</strong> exceptional service and warranties to ensure your satisfaction.</li>
-            </ul>
-        </section>
-
-        <section class="call-to-action">
-            <span class="eyebrow">Don't wait</span>
-            <h2>Don't miss our latest deals.</h2>
-            <p>These special offers won't last long. Take advantage of the discounts and upgrade your toolkit today.</p>
-            <a href="showcase.html" class="btn">Browse the showcase</a>
+        <!-- CTA -->
+        <section class="shop-outro">
+            <div class="band-inner" style="text-align:center; display:grid; gap:1.2rem; justify-items:center">
+                <p class="eyebrow" style="justify-content:center">Don't wait</p>
+                <h2>These offers won't last long.</h2>
+                <p class="lead">Take advantage of the discounts and upgrade your toolkit today.</p>
+                <a href="showcase.html" class="btn">Browse the shop <span class="arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
         </section>
     </main>
 
@@ -129,22 +177,43 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <span class="brand-word">ARCBLADE<em>WORKS</em></span>
-                <p class="footer-tag">Precision tools for every cut. Engineered in Sarnia, Ontario since 1998.</p>
+                <p class="footer-tag">Precision saws and blades for people who love the craft.
+                    Engineered in Sarnia, Ontario since 1998.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com/arcbladeworks" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://facebook.com/arcbladeworks" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/arcbladeworks" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://linkedin.com/company/arcbladeworks" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
             </div>
-            <nav class="footer-links" aria-label="Footer">
-                <a href="showcase.html">Showcase</a>
-                <a href="specials.html">Specials</a>
-                <a href="training.html">Training</a>
-                <a href="contact.html">Contact</a>
+            <nav aria-label="Shop">
+                <p class="footer-head">Shop</p>
+                <div class="footer-links">
+                    <a href="showcase.html">All products</a>
+                    <a href="specials.html">Deals</a>
+                    <a href="training.html">Training</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </nav>
+            <nav aria-label="Company">
+                <p class="footer-head">Company</p>
+                <div class="footer-links">
+                    <a href="about.html">About us</a>
+                    <a href="team.html">Our team</a>
+                    <a href="faqs.html">FAQs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
             </nav>
             <div class="footer-contact">
+                <p class="footer-head">Get in touch</p>
                 <a href="mailto:support@arcbladeworks.com">support@arcbladeworks.com</a>
                 <a href="tel:+18001234567">1-800-123-4567</a>
+                <address>123 Industrial Drive<br>Sarnia, ON, Canada</address>
             </div>
         </div>
         <div class="footer-base">
-            <p>&copy; 2026 ArcBlade Works. All rights reserved.</p>
-            <p>Akash Mannil · C0952939</p>
+            <p>&copy; 2026 ArcBlade Works. All rights reserved. · Akash Mannil · C0952939</p>
+            <div class="pay-chips" aria-hidden="true"><span>VISA</span><span>MC</span><span>AMEX</span><span>PAYPAL</span></div>
         </div>
     </footer>
 

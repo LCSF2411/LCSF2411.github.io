@@ -1,76 +1,108 @@
-/* training.css — page-specific layout (dark theme). Global tokens in styles.css */
+/* training.css — page-specific layout. Global tokens live in styles.css */
 
-.training-schedule { overflow-x: auto; }
+/* the table scrolls inside its own container on small screens */
+.table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: var(--shadow-1);
+    margin-top: 1.6rem;
+}
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1.5rem;
-    min-width: 640px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
+    min-width: 680px;
 }
 caption {
-    font-family: var(--sans);
-    font-size: 0.74rem;
-    letter-spacing: 0.28em;
+    caption-side: top;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--ember-deep);
     text-align: left;
-    margin-bottom: 1.2rem;
+    padding: 1.1rem 1.2rem 0.6rem;
 }
 thead th {
-    background: var(--panel-3);
+    background: var(--paper-2);
     color: var(--ink);
     font-family: var(--sans);
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: left;
-    padding: 0.9rem 1rem;
-    border-bottom: 1px solid var(--line-2);
+    padding: 0.9rem 1.2rem;
+    border-block: 1px solid var(--line);
 }
 td {
-    padding: 0.85rem 1rem;
+    padding: 0.85rem 1.2rem;
     border-bottom: 1px solid var(--line);
     color: var(--muted);
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     vertical-align: middle;
 }
-tbody tr { background: var(--panel); transition: background 0.3s var(--ease); }
-tbody tr:nth-child(even) { background: var(--bg-2); }
-tbody tr:hover { background: rgba(200,137,61,0.10); }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr { transition: background 0.25s var(--ease); }
+tbody tr:hover { background: var(--ember-tint); }
 td:first-child { color: var(--ink); font-weight: 600; }
+.session-price { font-family: var(--mono); font-weight: 500; color: var(--ink); }
+
 td img.product-img {
-    width: 44px; height: 44px;
+    width: 46px; height: 46px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-right: 0.8rem;
     vertical-align: middle;
-    border: 1px solid var(--line-2);
-    background: var(--panel-3);
+    border: 1px solid var(--line);
+    background: var(--paper-2);
 }
 
-ul.training-details, .contact-info ul {
+/* what you'll learn checklist */
+.learn-list {
     list-style: none;
     display: grid;
-    gap: 0.8rem;
-    margin-top: 1.4rem;
+    gap: 0.9rem;
+    margin-top: 1.6rem;
+    padding: 0;
 }
-ul.training-details li {
+@media (min-width: 720px) { .learn-list { grid-template-columns: repeat(2, 1fr); } }
+.learn-list li {
     position: relative;
-    padding-left: 1.8rem;
+    padding: 1.1rem 1.2rem 1.1rem 3rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
     color: var(--muted);
+    font-size: 0.96rem;
 }
-ul.training-details li::before {
+.learn-list li::before {
     content: "";
     position: absolute;
-    left: 0; top: 0.55em;
-    width: 8px; height: 8px;
-    border-right: 2px solid var(--accent);
-    border-bottom: 2px solid var(--accent);
-    transform: rotate(45deg);
+    left: 1.15rem; top: 1.45rem;
+    width: 9px; height: 9px;
+    border-right: 2.5px solid var(--pine);
+    border-bottom: 2.5px solid var(--pine);
+    transform: rotate(45deg) translateY(-50%);
 }
-.contact-info a { color: var(--accent-soft); }
+
+/* register / contact duo */
+.register-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+}
+@media (min-width: 820px) { .register-grid { grid-template-columns: 1fr 1fr; } }
+.register-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    box-shadow: var(--shadow-1);
+}
+.register-card h2 { font-size: var(--fs-h3); margin-bottom: 0.7rem; }
+.register-card ul { list-style: none; display: grid; gap: 0.6rem; margin-top: 1rem; padding: 0; }
+.register-card li { color: var(--muted); font-size: 0.96rem; }
+.register-card .btn { margin-top: 1.3rem; }

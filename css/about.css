@@ -1,62 +1,83 @@
-/* about.css — page-specific layout (dark theme). Global tokens in styles.css */
+/* about.css — page-specific layout. Global tokens live in styles.css */
 
-.about-intro h2, .our-story h2 { max-width: 18ch; }
-.about-intro .lead { max-width: 60ch; }
+/* story two-column */
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.6rem, 4vw, 3.5rem);
+    align-items: start;
+}
+@media (min-width: 880px) { .story-grid { grid-template-columns: 1.1fr 0.9fr; } }
+.story-grid h2 { max-width: 18ch; margin-bottom: 1rem; }
 
-.why-shop-with-us ol {
+/* stat row */
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+}
+.stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem;
+    box-shadow: var(--shadow-1);
+}
+.stat strong {
+    display: block;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--ember-deep);
+    line-height: 1.1;
+}
+.stat span { font-size: 0.88rem; color: var(--muted); }
+
+/* numbered reasons */
+.reasons ol {
     counter-reset: reasons;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.1rem;
     margin-top: 2rem;
+    padding: 0;
 }
-.why-shop-with-us li {
+@media (min-width: 760px) { .reasons ol { grid-template-columns: repeat(2, 1fr); } }
+.reasons li {
     counter-increment: reasons;
     position: relative;
-    background: var(--panel);
+    background: var(--card);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 1.4rem 1.5rem 1.4rem 4.2rem;
+    padding: 1.4rem 1.5rem 1.4rem 4.4rem;
     color: var(--muted);
+    box-shadow: var(--shadow-1);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
 }
-.why-shop-with-us li::before {
+.reasons li:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.reasons li::before {
     content: counter(reasons, decimal-leading-zero);
     position: absolute;
-    left: 1.4rem; top: 1.2rem;
-    font-family: var(--display);
-    font-size: 1.4rem;
-    color: var(--accent);
+    left: 1.4rem; top: 1.15rem;
+    font-family: var(--mono);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ember);
 }
 
-.our-guarantee {
-    background: linear-gradient(135deg, rgba(200,137,61,0.14), rgba(143,94,38,0.05));
-    border: 1px solid var(--line-2);
-    border-radius: var(--radius-lg);
-}
-.our-guarantee strong { color: var(--accent-soft); }
-
-.customer-testimonials blockquote {
-    background: var(--panel);
+/* guarantee panel */
+.guarantee-panel {
+    background:
+        radial-gradient(70% 120% at 0% 0%, var(--ember-tint), transparent 60%),
+        var(--card);
     border: 1px solid var(--line);
-    border-left: 3px solid var(--accent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 1.5rem 1.8rem;
-    margin: 1rem 0;
-    font-style: italic;
-    color: var(--ink);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-2);
+    padding: clamp(1.8rem, 4vw, 3rem) !important;
+    text-align: center;
+    max-width: min(calc(var(--container) - 2 * var(--gutter)), 100%);
 }
-.customer-testimonials blockquote strong { color: var(--accent-soft); font-style: normal; }
-
-.company-values ul, .future-vision ul {
-    list-style: none;
-    display: grid;
-    gap: 0.8rem;
-    margin-top: 1.5rem;
-}
-.company-values li { color: var(--muted); padding-left: 1.4rem; position: relative; }
-.company-values li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
-
-@media (min-width: 720px) {
-    .why-shop-with-us ol { grid-template-columns: repeat(2, 1fr); }
-}
+.guarantee-panel h2 { max-width: 22ch; margin-inline: auto; }
+.guarantee-panel p { max-width: 62ch; margin: 1rem auto 0; }
+.guarantee-panel strong { color: var(--ember-deep); }
